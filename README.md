@@ -51,3 +51,7 @@ Para autenticarte, puedes usar el siguiente usuario mockeado:
   "password": "mipass"
 }
 ```
+
+#### Nota
+
+Subi el .env a propósito para realizar más rápido las pruebas, sin embargo, este no debería subirse para una aplicación real.
