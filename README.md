@@ -1,54 +1,53 @@
-# React + TypeScript + Vite
+# 📚 Frontend - Library Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el frontend de una aplicación de gestión de libros. Está construido con **React**, **Zustand** para el manejo del estado global, y se comunica con una API RESTful desarrollada en .NET.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Autenticación con JWT
+- Login de usuarios (Admin y User)
+- Listado de libros
+- Crear, actualizar y eliminar libros (solo Admin)
+- Selección de libro activo
+- Manejo centralizado del estado con Zustand
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧱 Tecnologías utilizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [React](https://reactjs.org/)
+- [Zustand](https://github.com/pmndrs/zustand)
+- [Axios](https://axios-http.com/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 🔧 Instalación
+
+1. Clona el repositorio:
+
+```bash
+git https://github.com/CarlosArancibia/library-app-frontend.git
+cd library-app-frontend
+`
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Usuarios de prueba
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Para autenticarte, puedes usar el siguiente usuario mockeado:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```json
+{
+  "email": "admin",
+  "password": "password"
+},
+{
+  "email": "user1",
+  "password": "123456"
+},
+{
+  "email": "carlos",
+  "password": "mipass"
+}
 ```
